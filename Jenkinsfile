@@ -11,7 +11,7 @@ pipeline {
         stage ('Edit CSV file') {
             steps {
                 // Run the Python script that edits the CSV file with the given arguments
-                sh "python edit_data.py ${params.arg1} ${params.arg2} ${params.arg3}"
+                sh "python edit_csv.py ${params.arg1} ${params.arg2} ${params.arg3}"
             }
         }
         stage ('Push changes to Git') {
